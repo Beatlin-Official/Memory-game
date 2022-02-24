@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Stint+Ultra+Condensed&display=swap');
+@mixin phone {
+    @media screen and(max-width: 480px) {
+        @content
+    }
+}
+
+;
+@mixin tablet {
+    @media screen and(max-width: 800px) {
+        @content
+    }
+}
+
+;
+@mixin desktop {
+    @media screen and(max-width: 1200px) {
+        @content
+    }
+}
+
+body {
+    margin: 2rem auto;
+    padding: 0;
+    font-family: 'Righteous', 'Stint Ultra Condensed';
+    box-sizing: border-box;
+    width: 85%;
+    background: rgb(238, 238, 238);
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .logo {
+        width: 30%;
+        height: auto;
+        @include tablet {
+            width: 45%;
+        }
+    }
+    .scoreboard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%;
+        margin: 1rem auto;
+        font-family: 'Stint Ultra Condensed';
+        h1 {
+            margin: 10px;
+            font-size: 2rem;
+            @include tablet {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1vw;
+    background: rgb(56, 56, 56);
+    border-radius: 10px;
+}
+
+.card {
+    flex: 6.5% 0 1;
+    height: 7vw;
+    border-radius: 5%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.3vw;
+    background: rgb(255, 255, 255);
+    @include desktop {
+        flex: 7.5% 0 1;
+    }
+    @include tablet {
+        flex: 6.5% 0 1;
+    }
+    img {
+        position: absolute;
+        z-index: 1;
+        max-width: 80%;
+        top: 15%;
+        @include desktop {
+            top: 10%;
+        }
+    }
+    p {
+        font-size: 2vw;
+        display: block;
+        align-self: center;
+        z-index: 2;
+        @include desktop {
+            font-size: 3vw;
+        }
+    }
+}
+
+.back {
+    background: url('../img/card-graphy.png');
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.paired {
+    background: rgb(141, 141, 141);
+    background-size: cover;
+    filter: grayscale(50%);
+    opacity: 0.5;
+}

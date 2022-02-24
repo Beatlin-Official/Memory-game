@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Stint+Ultra+Condensed&display=swap");
+body {
+  margin: 2rem auto;
+  padding: 0;
+  font-family: 'Righteous', 'Stint Ultra Condensed';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 85%;
+  background: #eeeeee;
+}
+
+#header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#header-container .logo {
+  width: 30%;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  #header-container .logo {
+    width: 45%;
+  }
+}
+
+#header-container .scoreboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  margin: 1rem auto;
+  font-family: 'Stint Ultra Condensed';
+}
+
+#header-container .scoreboard h1 {
+  margin: 10px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  #header-container .scoreboard h1 {
+    font-size: 1.5rem;
+  }
+}
+
+#cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1vw;
+  background: #383838;
+  border-radius: 10px;
+}
+
+.card {
+  -webkit-box-flex: 6.5%;
+      -ms-flex: 6.5% 0 1;
+          flex: 6.5% 0 1;
+  height: 7vw;
+  border-radius: 5%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0.3vw;
+  background: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    -webkit-box-flex: 7.5%;
+        -ms-flex: 7.5% 0 1;
+            flex: 7.5% 0 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    -webkit-box-flex: 6.5%;
+        -ms-flex: 6.5% 0 1;
+            flex: 6.5% 0 1;
+  }
+}
+
+.card img {
+  position: absolute;
+  z-index: 1;
+  max-width: 80%;
+  top: 15%;
+}
+
+@media screen and (max-width: 1200px) {
+  .card img {
+    top: 10%;
+  }
+}
+
+.card p {
+  font-size: 2vw;
+  display: block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  .card p {
+    font-size: 3vw;
+  }
+}
+
+.back {
+  background: url("../img/card-graphy.png");
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paired {
+  background: #8d8d8d;
+  background-size: cover;
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style.css.map */
