@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Stint+Ultra+Condensed&display=swap');
 @mixin phone {
-    @media screen and(max-width: 480px) {
+    @media screen and(max-width: 550px) {
         @content
     }
 }
@@ -26,6 +26,9 @@ body {
     box-sizing: border-box;
     width: 85%;
     background: rgb(238, 238, 238);
+    @include phone {
+        margin: 1rem auto;
+    }
 }
 
 #header-container {
@@ -33,6 +36,10 @@ body {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+    @include phone {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
     .logo {
         width: 30%;
         height: auto;
@@ -50,8 +57,14 @@ body {
         h1 {
             margin: 10px;
             font-size: 2rem;
+            &:first-child {
+                color: #90F343;
+            }
             @include tablet {
                 font-size: 1.5rem;
+            }
+            @include phone {
+                font-size: 2rem;
             }
         }
     }
@@ -75,11 +88,17 @@ body {
     justify-content: space-around;
     margin: 0.3vw;
     background: rgb(255, 255, 255);
+    cursor: pointer;
     @include desktop {
         flex: 7.5% 0 1;
     }
     @include tablet {
-        flex: 6.5% 0 1;
+        flex: 8% 0 1;
+    }
+    @include phone {
+        flex: 15% 0 1;
+        height: 12vw;
+        margin: 0.5vw;
     }
     img {
         position: absolute;
@@ -98,6 +117,9 @@ body {
         @include desktop {
             font-size: 3vw;
         }
+        @include phone() {
+            font-size: 5vw;
+        }
     }
 }
 
@@ -114,4 +136,56 @@ body {
     background-size: cover;
     filter: grayscale(50%);
     opacity: 0.5;
+}
+
+.wrong {
+    animation-name: wrongAnimation;
+    animation-duration: 0.2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes wrongAnimation {
+    to {
+        opacity: 0.5;
+    }
+}
+
+.completed {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    text-align: center;
+    padding: 3rem;
+    padding-bottom: 10rem;
+    background-color: #90F343;
+    @include tablet {
+        padding-bottom: 4rem;
+    }
+    h1 {
+        color: rgb(255, 255, 255);
+        font-size: 8rem;
+        margin: 0;
+        @include tablet {
+            font-size: 5rem;
+        }
+    }
+    p {
+        font-family: 'Stint Ultra Condensed';
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 0;
+    }
+    button {
+        background-color: #ffffff;
+        font-family: "Righteous";
+        font-size: 1rem;
+        margin: 1rem;
+        border: 0;
+        border-radius: 8px;
+        padding: 8px;
+        cursor: pointer;
+    }
 }
