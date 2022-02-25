@@ -83,7 +83,8 @@ body {
 
 @media screen and (max-width: 550px) {
   #header-container .scoreboard h1 {
-    font-size: 2rem;
+    font-size: 1rem;
+    margin: 0 10px;
   }
 }
 
@@ -243,6 +244,12 @@ body {
 @media screen and (max-width: 800px) {
   .completed h1 {
     font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .completed h1 {
+    font-size: 3rem;
   }
 }
 

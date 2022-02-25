@@ -64,7 +64,8 @@ body {
                 font-size: 1.5rem;
             }
             @include phone {
-                font-size: 2rem;
+                font-size: 1rem;
+                margin: 0 10px;
             }
         }
     }
@@ -170,6 +171,9 @@ body {
         margin: 0;
         @include tablet {
             font-size: 5rem;
+        }
+        @include phone {
+            font-size: 3rem;
         }
     }
     p {
