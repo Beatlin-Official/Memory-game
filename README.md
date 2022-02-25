@@ -6,7 +6,7 @@
 
 
 ## Memory Game
-[遊戲遊玩 / Game Here](https://beatlin-official.github.io/test/).
+[遊戲遊玩 / Game Here](https://beatlin-official.github.io/Memory-game/).
 
 ## 功能介紹
 
